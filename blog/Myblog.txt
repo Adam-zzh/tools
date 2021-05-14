@@ -1,0 +1,25 @@
+博客开发
+	参考网站
+		掘金：https://juejin.cn/
+		https://xiaoyou66.com/
+		http://www.btorange.com/?blogtype=book#book2
+		https://www.vergessen.top/
+		https://www.askajohnny.com/#/resume
+		
+	学习前端： https://github.com/mqyqingfeng/Blog/issues/5
+	
+	https://zhengguanyu.github.io/archives/
+	
+	https://www.jianshu.com/p/aa46fbf198e2?open_source=weibo_search
+	
+	个人博客数据库设计    	https://blog.csdn.net/chachapaofan/article/details/86571657?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-8.baidujs&dist_request_id=1328741.16725.16168643404330107&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-8.baidujs
+	
+1.
+transform:translate(0px,0px),即延X轴和延Y轴均移动0像素
+a:not(.router-link-active) 排除选择器
+
+675427776@qq.com 5211314xiyou
+
+redis 密码123456
+
+https://github.com/wuyouzhuguli/SpringAll

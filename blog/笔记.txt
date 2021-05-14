@@ -1,0 +1,285 @@
+1.springboot：2.2.6  https://docs.spring.io/spring-boot/docs/2.2.6.RELEASE/reference/html/
+启动器：https://docs.spring.io/spring-boot/docs/2.2.6.RELEASE/reference/html/using-spring-boot.html#using-boot-starter
+2.Dependency Analyzer分析器的安装 ：安装maven helper插件（解决依赖冲突问题）
+3.notepad 上方编辑栏点击行操作进行合并行，分割行。有一个漏斗样式的小图标可以显示\r\n。
+4.https://blog.csdn.net/lijinqi1987/article/details/52387176?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-12&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-12
+操作更改不同行和不同列下的值：ctrl选中操作的行，然后ctrl+D进行文本选中
+Ctrl+Shift+D  复制光标所在整行，插入到下一行。
+Ctrl+D 选中光标所占的文本，继续操作则会选中下一个相同的文本。
+Alt+F3 可一次性选择全部的相同文本进行同时编辑。
+Ctrl+L 选中整行，继续操作则继续选择下一行，效果和 Shift+↓ 效果一样。
+Ctrl+Shift+L 先选中多行，再按下快捷键，会在每行行尾插入光标，即可同时编辑这些行。
+Shift+F11 免打扰模式
+5. pom文件中添加了“org.springframework.boot:spring-boot-maven-plugin”插件。在添加了该插件之后，当运行“mvn package”进行打包时，会打包成一个可以直接运行的 JAR 文件，使用“java -jar”命令就可以直接运行。
+6.devtools配置：https://www.cnblogs.com/chenkeyu/p/10296588.html
+7.spring-boot-dependencies、spring-boot-starter-parent、io.spring.platform三者是继承关系 父到子的依赖
+8.maven依赖远程提示：https://www.cnblogs.com/Bruce_H21/p/9875125.html
+9.仿站：https://ajz.fkw.com/reg.html?bizType=0
+		https://zp22019544.jz.fkw.com/?fromJzAllSite=true
+10.git提交远程仓库地址：https://www.jianshu.com/p/981d3aec1c47
+https://www.cnblogs.com/aleafo/p/5807301.html
+https://blog.csdn.net/wildye/article/details/80524535
+报错：刚刚接触github时，碰到Warning: Permanently added the RSA host key for IP address '*******‘ denied（publickey）的问题。（https://blog.csdn.net/comeonbabe_/article/details/80244854?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase）
+11.模板：https://i.fkw.com/portal.jsp
+https://www.17sucai.com/pins/tag/1403.html
+背景：https://www.tukuppt.com/backdrop/
+12 bootstrap的使用：https://www.runoob.com/bootstrap/bootstrap-dropdown-plugin.html
+13.html无法加载js文件并且控制台也没有报错 解决要有结束标签不能以/结束
+14.Font Awesome字体图标：https://www.thinkcmf.com/font/search/index.html
+15.快捷提示依赖索引ctrl+alt+空格 
+16.网盘资源搜索网址：dalipan.com（大力盘）
+17.PagerHelper MyBatis分页插件，简单的几行代码就能实现分页，在与SpringBoot整合时，只要整合了PagerHelper就自动整合了MyBatis。
+PageHelper.startPage(pageNum, pageSize);
+//之后进行查询操作将自动进行分页
+List<PmsBrand> brandList = brandMapper.selectByExample(new PmsBrandExample());
+//通过构造PageInfo对象获取分页信息，如当前页码，总页数，总条数
+PageInfo<PmsBrand> pageInfo = new PageInfo<PmsBrand>(list);
+18.generator逆向出现配置文件不存在  因为在pom文件中没有指定资源路径 在pom文件的build中添加资源定位
+
+用的updateByExampleSelective，更新的时候只会更新divChangeStatus这个字段，但是如果用updateByExample，其他的字段都会设置为Null！太恐怖了，用了不当，就会导致灾难性的后果，所以，只建议用updateByExampleSelective这个，不要用updateByExample！
+
+更新Blob类型字段要用updateByPrimaryKeyWithBLOBs  不然不会报错也不会更新
+19.datasource配置的url属性没有读取到的原因可能是配置 spring - datasource - url的文件没有加载. 解决在pom文件中build-》resources-》resource 添加yml释放
+20. Swagger-UI是HTML, Javascript, CSS的一个集合，可以动态地根据注解生成在线API文档。
+21.
+<collection property="attrValueList" COLUMNPREFIX="ATTR_" ofType="com.yqz.zzh.elasticsearch.nosql.document.EsProductAttributeValue">
+    <id column="id" property="id" jdbcType="BIGINT"/>
+    <result column="product_attribute_id" property="productAttributeId" jdbcType="BIGINT"/>
+	<result column="value" property="value" jdbcType="VARCHAR"/>
+	<result column="type" property="type"/>
+	<result column="name" property="name"/>
+</collection>
+
+下边的sql编写通过起别名只写id对应关系，其他的可以不用写对应关系，对于子集合 通过起有规则的别名然后写对应关系
+22.
+There is no tracking information for the current branch.
+git remote add origin https://github.com/macrozheng/mall-learning.git
+
+23.博客参照网址：https://github.com/foru17/front-end-collect
+https://github.com/timqian/chinese-independent-blogs
+24. 数据库某条记录的某字段为空 也要返回 要设置mybatis.xml configuration->settings->setting{<setting name="callSettersOnNulls" value="true"/>}
+25.instr() 返回字符串在字符串中首次出现的位置；如果没有找到，则返回0.
+26.substr(str,pos,len)参数说明：str为列名/字符串； post为起始位置，pos是从1开始的；如果为正数，就表示从正数的位置往下截取字符串（起始坐标从1开始），反之，pos为负数，那么表示就从倒数第几个开始截取；len为截取字符个数/长度
+27.flex一系列属性 https://www.cnblogs.com/xianxianxxx/p/8086554.html
+	一、flex-direction: （元素排列方向）
+		※ flex-direction:row （横向从左到右排列==左对齐）
+		※ flex-direction:row-reverse （与row 相反）
+		※ flex-direction:column （从上往下排列==顶对齐）
+		※ flex-direction:column-reverse （与column 相反）
+	二、flex-wrap: （内容一行容不下的时候才有效）
+		※ flex-wrap:nowrap （超出不换行，很奇怪里面的宽度会变成100%）
+		※  flex-wrap:wrap （超出按父级的高度平分）
+		※ flex-wrap:wrap-reverse（与wrap 相反）
+	三、justify-content: （水平对齐方式
+		※ flex-start （水平左对齐）
+		※  justify-content:flex-end; （水平右对齐）
+		※ justify-content:center; （水平居中对齐）
+		※ justify-content:space-between; （两端对齐）
+		※ justify-content:space-around; （两端间距对其）
+	四、align-items: （垂直对齐方式）
+		※ align-items:stretch; （默认）
+		※ align-items:flex-start; （上对齐，和默认差不多）
+		※ align-items:flex-end; （下对齐）
+		※  align-items:center;（居中对齐）
+		※ align-items:baseline; （基线对齐）最后一个有点难
+		
+28.阿里字体库
+https://www.iconfont.cn	
+
+29.idea常用插件
+https://blog.csdn.net/weixin_44655599/article/details/113702163?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.control&dist_request_id=1332031.1044.16190251370447949&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-13.control
+30.HttpMethod.options请求
+	获取服务器支持的HTTP请求方法;
+	用来检查服务器的性能。例如：AJAX进行跨域请求时的预检，需要向另外一个域名的资源发送一个HTTP OPTIONS请求头，用以判断实际发送的请求是否安全;
+	
+	CORS跨域请求模式会有”预检”的请求，也就是正常请求之前的options请求
+31.CSRF跨站请求伪造：同意浏览器，登陆A、B网站，B网站利用用户在A网站的cookie操作A网站。
+	CORS（Cross-Origin Resource-sharing）是一个机制，它在浏览器为了避免CSRF的发生时而执行，浏览器在当某个资源请求其他不属于它的来源服务器的资源（特征：不同的域、协议或端口）时会进行的校验。CORS定义了两种请求：简单请求（HEAD、GET、POST）和非简单请求（其余所有请求），后者在请求发送前会发出一个前置请求（OPTIONS请求）带有如下字段：
+		Origin: 普通的HTTP请求也会带有，在CORS中专门作为Origin信息供后端比对,表明来源域。
+		Access-Control-Request-Method: 接下来请求的方法，例如PUT, DELETE等等
+		Access-Control-Request-Headers: 自定义的头部，所有用setRequestHeader方法设置的头部都将会以逗号隔开的形式包含在这个头中
+		
+	如果服务器配置了cors，会返回对应对的字段：
+		Access-Control-Allow-Origin:允许跨域访问的域，可以是一个域的列表，也可以是通配符"*"
+		Access-Control-Allow-Methods:允许使用的请求方法，以逗号隔开
+		Access-Control-Allow-Headers:允许自定义的头部，以逗号隔开，大小写不敏感
+	浏览器再根据服务器的返回值判断是否发送非简单请求（是则发送OPTIONS请求）。简单请求前面讲过是直接发送，只是多加一个origin字段表明跨域请求的来源
+31.BCryptPasswordEncoder有着它自己的优势所在，首先加密的hash值每次都不同，就像md5的盐值加密一样，只不过盐值加密用到了随机数。BCryptPasswordEncoder的生成加密存储串也有60位之多		
+
+32.spring security基础篇
+	auth.inMemoryAuthentication().withUser("admin").password("admin").roles("ADMIN","USER") roles()方法所给定的值都会加一个"ROLE_"前缀，并将其作为权限授予用户。等同如下
+	auth.inMemoryAuthentication().withUser("admin").password("admin").authorities("ROLE_AMIN","ROLE_USER")
+
+	可以配置多种认证方式：基于内存认证（如上）；基于数据库表用户存储认证；自定义的用户存储认证（实现UserDetailsService接口）
+
+	auth.jdbcAuthentication().dataSource(dataSource)
+					.usersByUsernameQuery("select account,password,true from user where account=?")
+					.authoritiesByUsernameQuery("select account,role from user where account=?")；
+	auth.userDetailsService(securityUserDetailsService);
+
+	and().requiresChannel().antMatchers("/admin/info").requiresSecure(); requiresChannel()方法使url强制使用https
+	and().rememberMe().key("abc").rememberMeParameter("remember_me").rememberMeCookieName("my-remember-me").tokenValiditySeconds(86400)；remember-me不用每次都登陆。
+	
+	and().formLogin().loginPage("/login").usernameParameter("username").passwordParameter("password")配置登陆页面
+                .and().exceptionHandling().accessDeniedPage("/loginfail")配置异常页面
+33. 
+	SecurityContextHolder 为了方便我们访问 SecurityContext 对象, Spring Security 提供了 SecurityContextHolder 类, 通过 SecurityContextHolder.getContext() 即可获取 SecurityContext 对象. SecurityContextHolder 采用 ThreadLocal 方式存储 SecurityContext 对象, 这样就能保证我们调用 SecurityContextHolder.getContext() 得到的永远是当前用户的 SecurityContext.
+	
+	SecurityContext SecurityContext 是 Spring Security 的核心, 保存着当前用户是谁, 该用户是否被认证, 具有哪些角色.
+	
+	Authentication 接口是 SecurityContext 中的核心, 包含着 sessionId/IP 、用户 UserDetails 信息、用户的角色等等, 它有很多实现类(主要是 AbstractAuthenticationToken 的子类), 每种类都对应着一个认证方式.
+34.spring-boot-starter，spring-boot-starter-parent	
+	spring-boot-starter-parent 是一个特殊的starter,使用它之后，常用的包依赖可以省去version标签。 Spring Boot的版本仲裁中心，控制了所有依赖的版本号，控制版本信息 我们导入依赖默认是不需要写版本
+	
+	Spring Boot的核心启动器，包含了自动配置、日志和YAML
+	
+	Maven多继承，就是使用<type>pom</type><scope>import</scope>，type标签的默认值是jar，代表我们依赖导入的是一个jar包，现在我们设置成了pom，说明导入的是一个父模块，后面的scope标签中的值import代表把父模块中的jar包导入进来，不过需要注意的是<type>pom</type><scope>import</scope>,这种方式只能用在<dependencyManagement></dependencyManagement>中
+35。需不需要加@EnableWebSecurity注解？
+	如果添加了start，那么就不需要了。以spring-boot-start-security为例，在SecurityAutoConfiguration这个类中，看到导入SpringBootWebSecurityConfiguration这个类，它带有@EnableWebSecurity注解
+36.
+虽然每次 BCryptPasswordEncoder 的 encoder 结果都不一样，但是存贮其中一次加密结果 也能够验证成功
+
+37. @Bean 结合extends 可以在子类写父类引入的实现，父类可以@autowired引入接口
+
+38、vue 使用jwt token
+
+39. 动态权限决策decide
+dynamicSecurityMetadataSource.clearDataSource();
+后台资源被规则缓存到了一个MAP对象中，所有当后台资源变化时，需要清除缓存，在下次查询的时候重新加载。我们需要修改MyMesResourceController注入DynamicSecurityMetadataSource，当修改后台资源时，需要调用clearDataSource方法来清空缓存的数据
+
+40.Spring Validation校验
+
+	@NotNull(message="id不能为空")
+	@Max(message="年龄不能超过120岁", value = 120)
+	@Min(message="年龄不能小于1岁", value = 1)
+	@Future将来的时间
+	@FutureOrPresent，将来或者现在的时间
+	@Pattern，用于指定一个正则表达式
+	第一种：在Controller方法参数前加@Valid注解——校验不通过时直接抛异常
+	第二种：在Controller方法参数前加@Valid注解，参数后面定义一个BindingResult类型参数——执行时会将校验结果放进bindingResult里面，用户自行判断并处理
+	第三种：用户手动调用对应API执行校验——Validation.buildDefault ValidatorFactory().getValidator().validate(xxx) 
+			Set<ConstraintViolation<@Valid User>> validateSet = Validation.buildDefaultValidatorFactory()
+																		.getValidator().validate(user, new Class[0]);
+				
+41.分布式加锁
+	分布式锁可以基于很多种方式实现，比如zookeeper、redis。不管哪种方式，他的基本原理是不变的：用一个状态值表示锁，对锁的占用和释放通过状态值来标识
+	使用redis的setNX（SET if Not eXists）命令实现分布式锁
+	
+	如果一个持有锁的客户端失败或崩溃了不能释放锁则产生死锁 我们可以通过锁的键对应的时间戳来判断这种情况是否发生了，如果当前的时间已经大于lock.foo的值，说明该锁已失效，可以被重新使用
+42. Redisson - 是一个高级的分布式协调Redis客服端，能帮助用户在分布式环境中轻松实现一些Java的对象
+	支持Redis多种连接模式
+		集群模式
+			Config config = new Config();
+			config.useClusterServers()
+				.setScanInterval(2000) // cluster state scan interval in milliseconds
+				.addNodeAddress("127.0.0.1:7000", "127.0.0.1:7001")
+				.addNodeAddress("127.0.0.1:7002");
+			RedissonClient redisson = Redisson.create(config);
+		单例模式
+			RedissonClient redisson = Redisson.create();
+			Config config = new Config();
+			config.useSingleServer().setAddress("myredisserver:6379");
+			RedissonClient redisson = Redisson.create(config);
+		哨兵模式
+			Config config = new Config();
+			config.useSentinelServers()
+				.setMasterName("mymaster")
+				.addSentinelAddress("127.0.0.1:26389", "127.0.0.1:26379")
+				.addSentinelAddress("127.0.0.1:26319");
+			RedissonClient redisson = Redisson.create(config);
+		主从模式
+			Config config = new Config();
+			config.useMasterSlaveServers()
+				.setMasterAddress("127.0.0.1:6379")
+				.addSlaveAddress("127.0.0.1:6389", "127.0.0.1:6332", "127.0.0.1:6419")
+				.addSlaveAddress("127.0.0.1:6399");
+			RedissonClient redisson = Redisson.create(config);
+Redisson支持自动重试策略，默认是重试3次，间隔为1000ms。除了支持同步操作外，还支持异步方式和响应方式。
+
+43分布式事务
+		1.维护本地消息表 分布式事务=A系统本地事务 + B系统本地事务 + 消息通知;
+		A系统维护一张消息表log1,状态为未执行,B系统维护2张表,未完成表log2,已完成表log3,消息中间件用两个topic,topic1是A系统通知B要执行任务了,topic2是B系统通知A已经完成任务了,
+		
+		2.使用rocketmq事务消息
+		
+		3.两阶段提交协议(2PC) springboot+Atomikos or Bitronix
+			1、应用程序连接两个数据源。
+			2、应用程序通过事务协调器向两个库发起prepare，两个数据库收到消息分别执行本地事务（记录日志），但不提
+			交，如果执行成功则回复yes，否则回复no。
+			3、事务协调器收到回复，只要有一方回复no则分别向参与者发起回滚事务，参与者开始回滚事务。
+			4、事务协调器收到回复，全部回复yes，此时向参与者发起提交事务。如果参与者有一方提交事务失败则由事务协
+			调器发起回滚事务。
+ 
+		4.TCC事务补偿机制 Try、Confirm和Cancel
+			Try
+			下单业务由订单服务和库存服务协同完成，在try阶段订单服务和库存服务完成检查和预留资源。
+			订单服务检查当前是否满足提交订单的条件（比如：当前存在未完成订单的不允许提交新订单）。
+			库存服务检查当前是否有充足的库存，并锁定资源。
+			Confirm
+			订单服务和库存服务成功完成Try后开始正式执行资源操作。
+			订单服务向订单写一条订单信息。
+			库存服务减去库存。
+			Cancel
+			如果订单服务和库存服务有一方出现失败则全部取消操作。
+			订单服务需要删除新增的订单信息。
+			库存服务将减去的库存再还原。
+			优点：最终保证数据的一致性，在业务层实现事务控制，灵活性好。XA两阶段提交资源层面的，而TCC实际上把资源层面二阶段提交上提到了业务层面来实现。有效了的避免了XA两阶段提交占用资源锁时间过长导致的性能地下问题。
+			缺点：开发成本高，每个事务操作每个参与者都需要实现try/confirm/cancel三个接口。
+44、为什么使用分布式事务锁
+	synchronized关键字的作用域其实是一个进程，在这个进程下面的所有线程都能够进行加锁。但是多进程就不行了。对于秒杀商品来说，服务器一般是集群方式，synchronized无法保证数据的一致性。
+	分布式锁问题；
+		a.锁过期时间是10毫秒，如果一个用户秒杀时间是15毫秒，这也就意味着他可能还没秒杀成功，就有其他用户进来了。有可能其他用户提前删除了lock，但是当前用户还没有秒杀成功。最终造成数据的不一致 （user可以为手机号，随机生成不重复id）
+		解决 在finally中if(user.equals(stringRedisTemplate.opsForValue().get("lock"))){
+                 stringRedisTemplate.delete("lock");
+				}
+		b.秒杀商品时间太久，其他用户等不及 设置锁过期时间
+45、background-size: calc(50% - 20px) 100%;
+减号前后要有空格
+46.nginx配置
+ server.listen       8080      #监听请求的端口
+ server.server_name  localhost #监听请求的url
+ location 请求前缀标识 {
+            proxy_pass  http://admin; 后台服务地址 ip+端口号
+        }
+		
+Nginx代理proxy pass配置去除前缀 proxy_pass后面加根路径/
+47、Vue中使用Markdown https://segmentfault.com/a/1190000021289438
+	安装mavonEditor  npm install mavon-editor --save
+	Vue项目中引入mavonEditor import mavonEditor from 'mavon-editor' Vue.use(mavonEditor) 
+	在页面中使用mavonEditor
+		<mavon-editor  
+		:toolbars="toolbars"        //指定工具栏
+		@imgAdd="handleEditorImgAdd"     //指定图片上传调用的方法，该方法主要将图片上传后台，并且返回地址，替换到markdown中
+		@imgDel="handleEditorImgDel"    //删除图片调用的方法，该方法主要调用后台删除图片
+		style="height:600px"         //
+		v-model="value"         //绑定 value 值  必须的
+		@change="change"         //监听markdown输入 ，可以实时保存等等。。    
+		ref=md                //指定一个用来引用markdown的 可以是任意字符串
+		 />
+		 
+	问题 工具栏图标无法显示
+		@import 'mavon-editor/dist/css/index.css';
+	vue使用marked.js实现markdown转html并提取标题生成目录
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

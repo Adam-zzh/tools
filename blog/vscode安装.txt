@@ -1,0 +1,25 @@
+vscode安装
+	安装地址：http://vscode.cdn.azure.cn/stable/78a4c91400152c0f27ba4d363eb56d2835f9903a/VSCodeUserSetup-x64-1.52.1.exe
+	
+	常见插件：
+		HTML Snippets 使用H5代码片段以及提示
+		HTML CSS Support  让HTML标签上写智能提示class,当前项目所支持的样式
+		Debugger for Chrome  静态页面都可以用vscode来打断点调试
+		JQuery Code Snippets jq代码提示
+		Path Intellisense 自动路经补齐
+		Npm Intellisense require 时的包提示
+		Document this js的注释模板
+		ESlint 自定制js提示体会规则
+		Project Manager 多个项目之间快速切换的工具
+		beautiful 代码格式化插件
+		Bootstrap 3 Sinnpet bootstrap提示
+		Auto Rename Tag 修改html标签，自动帮你完成尾部闭合标签的同步修改，和webstorm一样。
+		JavaScript Atom Grammar 代码高亮
+		vscode-icon 让vscode资源目录加上图标、必备
+		One Dark Theme 主题
+		
+npm run serve/dev跑起来的是开发模式，因为是运行的本地服务模拟启动的；
+npm run build生成的是打包好的文件，用来部署到服务器上运行，所以是生产模式；
+
+api参考:https://cn.vuejs.org/v2/api/#component
+		https://www.runoob.com/vue2/vue-routing.html
